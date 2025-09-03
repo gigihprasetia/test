@@ -1,10 +1,38 @@
-import React from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import { Button } from "../ui/button";
+import { useIsVisible } from "@/Store/IsVisible";
 
 const Jumbotron = () => {
+  const { setVisible } = useIsVisible();
+
+  const targetRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        // setIsVisible(entry.isIntersecting);
+        setVisible(entry.isIntersecting);
+      },
+      { threshold: 0 } // elemen terlihat 50% baru dianggap terlihat
+    );
+
+    if (targetRef.current) {
+      observer.observe(targetRef.current);
+    }
+
+    return () => {
+      if (targetRef.current) {
+        observer.unobserve(targetRef.current);
+      }
+    };
+  }, []);
+
   return (
     // <div className="container mx-auto">
     <div
+      ref={targetRef}
       className={`bg-[url(/images/bg-main.webp)]  w-full h-[966px] bg-no-repeat bg-cover bg-center flex items-center`}
     >
       <div className="container mx-auto px-5 lg:px-20 text-white">

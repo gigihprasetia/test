@@ -1,7 +1,7 @@
+"use client";
 import React from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 import {
   Popover,
@@ -9,13 +9,25 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { dummyMenu } from "@/dummy";
+import { useIsVisible } from "@/Store/IsVisible";
 
 const Navbar = () => {
+  const { visible } = useIsVisible();
+
   return (
-    <div className="fixed px-5 lg:px-20 justify-between items-center top-0 container p-5  z-10 left-[50%] -translate-x-[50%] flex select-none">
+    <div
+      className={`fixed px-5 lg:px-20 justify-between items-center top-0 container p-5  z-10 left-[50%] -translate-x-[50%] flex select-none duration-500 ${
+        visible ? "bg-transparent" : "bg-white/50"
+      }`}
+    >
       <Popover>
         <PopoverTrigger asChild>
-          <GiHamburgerMenu size={35} color="white" />
+          <GiHamburgerMenu
+            size={35}
+            className={`duration-500 ${
+              visible ? "text-white" : "text-primary"
+            }`}
+          />
         </PopoverTrigger>
         <PopoverContent
           side="bottom"
