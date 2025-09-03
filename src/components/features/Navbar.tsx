@@ -67,7 +67,9 @@ const Navbar = () => {
       <div className="hidden md:flex gap-4 ">
         <Button
           variant={"ghost"}
-          className="rounded-none text-white hover:bg-transparent"
+          className={`rounded-none  hover:bg-transparent ${
+            visible ? "text-white" : "text-primary"
+          }`}
         >
           Contact US
         </Button>
