@@ -12,7 +12,7 @@ import { dummyMenu } from "@/dummy";
 
 const Navbar = () => {
   return (
-    <div className="fixed px-5 md:px-20 justify-between items-center top-0 container p-5  z-10 left-[50%] -translate-x-[50%] flex select-none">
+    <div className="fixed px-5 lg:px-20 justify-between items-center top-0 container p-5  z-10 left-[50%] -translate-x-[50%] flex select-none">
       <Popover>
         <PopoverTrigger asChild>
           <GiHamburgerMenu size={35} color="white" />

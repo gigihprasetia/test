@@ -21,13 +21,13 @@ const Card: FC<ICardProps> = ({
   src,
 }) => {
   return (
-    <div className="shadow-lg shadow-gray-400 rounded-md hover:bg-primary min-w-0 max-w-[368px] h-[224px] md:h-[580px] duration-500 p-[8px] md:p-[24px] group flex flex-col gap-4 select-none">
+    <div className="shadow-lg shadow-gray-400 rounded-md hover:bg-primary min-w-0 max-w-[368px] h-[224px] md:h-[480px] lg:h-[580px]  duration-500 p-[8px] md:p-[24px] group flex flex-col gap-4 select-none">
       <img
         alt="img"
         src={src}
         width={100}
         height={100}
-        className="w-full object-fill h-[322px]"
+        className="w-full object-fill min-h-0: h-full max-h-[322px]"
         draggable={false}
       />
       <p className="hidden md:block text-primary group-hover:text-white text-[16px] duration-500">

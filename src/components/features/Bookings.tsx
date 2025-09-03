@@ -11,7 +11,7 @@ import { PopoverTrigger } from "@radix-ui/react-popover";
 const Bookings = () => {
   return (
     <div className="relative h-0">
-      <div className="w-full absolute top-[-50px] left-[50%] translate-x-[-50%] container px-5 md:px-20 h-[112px] ">
+      <div className="w-full absolute top-[-50px] left-[50%] translate-x-[-50%] container px-5 lg:px-20 h-[112px] ">
         <div className="w-full h-full bg-white shadow-md rounded-none md:rounded-md grid grid-cols-2 p-5 md:grid-cols-4 place-content-center place-items-center gap-1">
           <div className="border-r-0 md:border-r-[1px] md:border-b-0 border-b-[1px] border-gray-500  w-full flex justify-center col-span-2 md:col-span-1">
             <Popover>

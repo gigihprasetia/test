@@ -8,23 +8,21 @@ import { HiArrowLongRight } from "react-icons/hi2";
 
 const Content = () => {
   return (
-    <div className="container px-5 md:px-20 mx-auto">
+    <div className="container px-5 lg:px-20 mx-auto">
       <div className="mt-40">
         <p className="font-medium text-[16px] md:text-[40px]">
           About Villa <span className="text-primary">Amadaha</span>
         </p>
-        <div className="mt-5 md:mt-40 flex flex-wrap gap-4">
-          <div className="border-[1px] border-primary w-fit translate-x-2">
+        <div className="mt-5 md:mt-40 flex flex-wrap md:flex-nowrap gap-4">
+          <div className="border-[1px] border-primary w-full md:w-fit translate-x-2">
             <img
               draggable={false}
               alt="bg-villa"
-              width={100}
-              height={100}
               src={"/images/bg-villa.webp"}
-              className="w-[368px] h-[368px] -translate-2 shadow-md shadow-gray-300"
+              className="w-full md:w-[368px] h-[368px]  -translate-2 shadow-md shadow-gray-300"
             />
           </div>
-          <div className=" ml-0 md:ml-[108px] flex  flex-col justify-between">
+          <div className=" ml-0 lg:ml-[50px] xl:ml-[108px] flex flex-col justify-between">
             <p className="min-w-0 max-w-[497px] text-[14px] md:text-[20px]">
               Villa Amadaha consist of Two Luxury Villas and one Traditional
               Javanese House surrounded by a tranquil rain forest setting,
@@ -82,11 +80,11 @@ const Content = () => {
 
         {/* /////////////////////////////////////////////// */}
 
-        <div className=" mt-[50px] md:mt-[159px] flex flex-col md:flex-row gap-[53px] relative flex-wrap md:flex-nowrap">
+        <div className=" mt-[50px] md:mt-[159px] flex flex-col md:flex-row  gap-[53px] items-start relative flex-wrap lg:flex-nowrap">
           <div className=" w-[200px] h-[150px] md:w-[576px] md:h-[326px] bg-[#F1F6F6] absolute -z-20 right-0 top-[80%] md:top-[30%]" />
           <div className="w-full max-w-[412px] flex flex-col  items-center md:items-start gap-2">
-            <p className="w-40 text-center md:text-start md:w-full text-[16px] md:text-[40px] font-bold">
-              Various <span className="text-primary">facilities</span> that you
+            <p className="w-40 text-center md:text-start md:w-full text-[16px] md:text-[30px] lg:text-[35px] xl:text-[40] font-bold">
+              Various <span className="text-primary ">facilities</span> that you
               can enjoy
             </p>
             <p className="text-[14px] md:text-[20px] font-light text-[#9E9E9E]">
@@ -100,17 +98,17 @@ const Content = () => {
             src={"/images/bg-section1.webp"}
             width={100}
             height={100}
-            className="hidden md:block w-full max-w-[319px] h-full max-h-[319px] shadow-md"
+            className=" hidden md:block w-full md:w max-w-[319px] h-full max-h-[319px] shadow-md"
             alt="1"
           />
           <img
             src={"/images/bg-section2.webp"}
             width={100}
             height={100}
-            className=" hidden md:block w-full max-w-[319px] h-full max-h-[319px] shadow-md"
+            className="  hidden md:block w-full max-w-[319px] h-full max-h-[319px] shadow-md"
             alt="2"
           />
-          <div className=" md:hidden flex gap-3">
+          <div className="w-full md:hidden flex gap-3">
             <img
               src={"/images/bg-section1.webp"}
               width={100}
